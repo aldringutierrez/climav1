@@ -1,2 +1,2 @@
-web: java -cp C:\Users\aeg\Documents\NetBeansProjects\climav1\target\classes;C:\Users\aeg\Documents\NetBeansProjects\climav1\target\dependency\* List
+web: java -cp C:\Users\aeg\Documents\NetBeansProjects\climav1\target\classes;C:\Users\aeg\Documents\NetBeansProjects\climav1\target\dependency\* 
 
