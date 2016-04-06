@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditClientesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditClientesLabel_idcli}" for="idcli" />
+                    <h:inputText id="idcli" value="#{clientesController.selected.idcli}" title="#{bundle.EditClientesTitle_idcli}" required="true" requiredMessage="#{bundle.EditClientesRequiredMessage_idcli}"/>
+                    <h:outputLabel value="#{bundle.EditClientesLabel_nombre}" for="nombre" />
+                    <h:inputText id="nombre" value="#{clientesController.selected.nombre}" title="#{bundle.EditClientesTitle_nombre}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_apellido}" for="apellido" />
+                    <h:inputText id="apellido" value="#{clientesController.selected.apellido}" title="#{bundle.EditClientesTitle_apellido}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_estadocivil}" for="estadocivil" />
+                    <h:inputText id="estadocivil" value="#{clientesController.selected.estadocivil}" title="#{bundle.EditClientesTitle_estadocivil}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_fecnacimiento}" for="fecnacimiento" />
+                    <h:inputText id="fecnacimiento" value="#{clientesController.selected.fecnacimiento}" title="#{bundle.EditClientesTitle_fecnacimiento}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditClientesLabel_sueldo}" for="sueldo" />
+                    <h:inputText id="sueldo" value="#{clientesController.selected.sueldo}" title="#{bundle.EditClientesTitle_sueldo}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_correo}" for="correo" />
+                    <h:inputText id="correo" value="#{clientesController.selected.correo}" title="#{bundle.EditClientesTitle_correo}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_departamento}" for="departamento" />
+                    <h:inputText id="departamento" value="#{clientesController.selected.departamento}" title="#{bundle.EditClientesTitle_departamento}" />
+                    <h:outputLabel value="#{bundle.EditClientesLabel_ciudad}" for="ciudad" />
+                    <h:inputText id="ciudad" value="#{clientesController.selected.ciudad}" title="#{bundle.EditClientesTitle_ciudad}" />
+                </h:panelGrid>
+                <h:commandLink action="#{clientesController.update}" value="#{bundle.EditClientesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditClientesViewLink}"/>
+                <br />
+                <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.EditClientesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditClientesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
