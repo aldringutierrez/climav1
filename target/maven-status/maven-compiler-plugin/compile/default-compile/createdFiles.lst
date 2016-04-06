@@ -1,9 +1,3 @@
-com\aeg\climav1\Clientes_.class
-com\aeg\climav1\ClientesController$ClientesControllerConverter.class
 com\aeg\climav1\util\JsfUtil.class
 com\aeg\climav1\Clientes.class
-com\aeg\climav1\ClientesFacade.class
-com\aeg\climav1\ClientesController$1.class
-com\aeg\climav1\ClientesController.class
-com\aeg\climav1\util\PaginationHelper.class
 com\aeg\climav1\AbstractFacade.class
