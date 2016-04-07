@@ -1,1 +1,2 @@
-web:    java $JAVA_OPTS -cp target/classes:target/dependency/* com.aeg.climav1.Main
+web:     node web.js
+worker:  node worker.js
